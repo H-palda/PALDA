@@ -124,11 +124,9 @@
       </ul>
     </div>
 
-    <div class="card">
+    <div class="card" id="apply">
       <h2>수거 신청하기</h2>
-      <form action="https://formspree.io/f/xzzeqzwp" method="POST"
-        onsubmit="event.preventDefault(); this.style.display='none'; const msg=document.createElement('p'); msg.innerHTML='<strong>신청 감사합니다!</strong><br>좋은 서비스로 보답하겠습니다.<br>(수거일정은 문자로 발송될 예정입니다)'; msg.style.fontWeight='bold'; msg.style.fontSize='1.2rem'; msg.style.color='#1e3a8a'; msg.style.textAlign='center'; msg.style.padding='2rem'; this.parentNode.appendChild(msg); setTimeout(()=>window.close?.(),3000);">
-
+      <form action="https://formspree.io/f/xzzeqzwp" method="POST">
         <label for="name">이름 또는 닉네임</label>
         <input type="text" id="name" name="name" required>
 
@@ -187,5 +185,22 @@
     카카오톡 채널: @팔다 | 인스타그램: @paldamarket<br/><br/>
     © 2025 PALDA. All rights reserved.
   </footer>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const form = document.querySelector('form');
+      form.addEventListener('submit', function () {
+        form.style.display = 'none';
+        const msg = document.createElement('p');
+        msg.innerHTML = '<strong>신청 감사합니다!</strong><br>좋은 서비스로 보답하겠습니다.<br>(수거일정은 문자로 발송될 예정입니다)';
+        msg.style.fontWeight = 'bold';
+        msg.style.fontSize = '1.2rem';
+        msg.style.color = '#1e3a8a';
+        msg.style.textAlign = 'center';
+        msg.style.padding = '2rem';
+        form.parentNode.appendChild(msg);
+      });
+    });
+  </script>
 </body>
 </html>
