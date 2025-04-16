@@ -132,9 +132,11 @@
     </ul>
   </div>
 
-  <div class="card" id="apply">
+  <div class="card">
+  
+$1
     <h2>수거 신청하기</h2>
-    <form action="https://formspree.io/f/xwkggkzv" method="POST">
+    <form$1 onsubmit="event.preventDefault(); this.style.display='none'; const msg=document.createElement('p'); msg.innerHTML='<strong>신청 감사합니다!</strong><br>좋은 서비스로 보답하겠습니다.<br>(수거일정은 문자로 발송될 예정입니다)'; msg.style.fontWeight='bold'; msg.style.fontSize='1.2rem'; msg.style.color='#1e3a8a'; msg.style.textAlign='center'; msg.style.padding='2rem'; this.parentNode.appendChild(msg); setTimeout(()=>window.close?.(),3000);">
       <label for="name">이름 또는 닉네임</label>
       <input type="text" id="name" name="name" required>
 
@@ -195,4 +197,3 @@
 </footer>
 </body>
 </html>
-
